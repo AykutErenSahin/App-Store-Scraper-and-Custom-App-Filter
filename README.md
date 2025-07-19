@@ -3,12 +3,13 @@
 
 ## Overview
 
-This project is a Python tool for fetching and filtering iOS App Store metadata using the iTunes Search API.  
+This project is a Python script for fetching and filtering iOS App Store metadata using the iTunes Search API.  
 It allows you to filter app lists based on custom business rules, such as:
 
 - Developers you've already contacted (tracked via a CSV/Excel file)  
 - Apps older than 1 year  
-- Apps not updated in the last 180 days  
+- Apps not updated in the last 90 days
+- Only contact one app per developer
 
 The result is a refined list of apps that are more relevant for outreach, partnership, or analysis.
 
@@ -52,7 +53,7 @@ python main.py app_list.csv deal_list.csv
 
 **Arguments:**
 
-- `app_list.csv`: The file containing app information (from the App Store API or other sources).  
+- `app_list.csv`: The file containing app IDs for which we are trying to retrieve metadata.  
 - `deal_list.csv`: The file tracking contacted developer IDs.  
 
 ---
@@ -73,12 +74,6 @@ This file will include apps that:
 
 ---
 
-## License
-
-MIT License
-
----
-
 ## Author
 
-[Your Name]
+Aykut Eren Şahin
